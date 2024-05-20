@@ -20,7 +20,7 @@ fun findCompliment(nums: IntArray, target: Int) {
         val diff = target - num
         when {
             //has already been checked for compliment
-            checked.contains(num) -> addToChecked(num)
+            checked.contains(num) -> false
             num == diff -> {
                 if (nums.count { it == num } > 1 ) {
                     printCompliment(num, num)
